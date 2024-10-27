@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout Example</title>
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Full height of the viewport */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center children vertically */
+            position: relative; /* Position relative for absolute positioning of overlay */
+        }
+        .grey-box {
+            background-color: lightgray; /* Grey background for header */
+            width: 100%; /* Full width */
+            height: 30%; /* 15% height */
+            position: absolute; /* Absolute positioning to center it */
+            top: 50%; /* Position it at the vertical center */
+            transform: translateY(-50%); /* Adjust for its own height */
+        }
+        .green-box {
+          background-color: lightgreen; /* Green background for overlay box */
+            width: 15%; /* Width of the green box (adjust as needed) */
+            height: 30%; /* Match the height of the grey box */
+            position: absolute; /* Position absolute to overlay on grey box */
+            top: 50%; /* Start at the vertical center of the viewport */
+            left: calc(50% - 7.5%); /* Center it horizontally (50% - half of its width) */
+            transform: translateY(-50%); /* Center it vertically within the grey box */
+        }
+        .main {
+            display: flex; /* Use flexbox for main content */
+            height: 100%; /* Remaining height */
+        }
+        .left {
+            background-color: lightblue;
+            width: 20%; /* 20% width */
+            height: 100%; /* Full height */
+        }
+        .center {
+            background-color: white; /* White background */
+            width: 60%; /* 60% width */
+            height: 100%; /* Full height */
+        }
+        .right {
+            background-color: rgb(254, 144, 161);
+            width: 20%; /* 20% width */
+            height: 100%; /* Full height */
+        }
+    </style>
+</head>
+<body>
+
+<div class="grey-box"></div> <!-- Grey Horizontal Box Centered Vertically -->
+<div class="green-box"></div> <!-- Green Square Box Overlaying Grey Box -->
+<div class="main">
+    <div class="left"></div> <!-- Pink Box -->
+    <div class="center"></div> <!-- White Center Area -->
+    <div class="right"></div> <!-- Blue Box -->
+</div>
+
+</body>
+</html>
